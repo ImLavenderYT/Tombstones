@@ -1,5 +1,5 @@
 # Tombstones
-Adds Deorative Tombstones to Minecraft!
+Adds Decorative Tombstones to Minecraft!
 
 ## Currrently adds:
 - Headstones
