@@ -1,0 +1,58 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "tombstones:block/headstone",
+		"particle": "tombstones:block/headstone"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 6],
+			"to": [15, 16, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 7, 8], "texture": "#0"},
+				"east": {"uv": [0, 8, 2, 16], "texture": "#0"},
+				"south": {"uv": [7, 0, 14, 8], "texture": "#0"},
+				"west": {"uv": [2, 8, 4, 16], "texture": "#0"},
+				"up": {"uv": [11, 10, 4, 8], "texture": "#0"},
+				"down": {"uv": [11, 10, 4, 12], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [85.18, 72.23, -11.52],
+			"translation": [0.75, 2.5, 1.25],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [85.18, 72.23, -11.52],
+			"translation": [0.75, 2.5, 1.25],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 128, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-180, 64, 180],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.35, 0.35, 0.35]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"head": {
+			"translation": [0, 12.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"fixed": {
+			"translation": [0, 0, 0.5],
+			"scale": [0.90039, 0.90625, 0.9]
+		}
+	}
+}
