@@ -1,6 +1,7 @@
 package io.github.imlavenderyt.tombstones.common.registry;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
@@ -19,7 +20,8 @@ public class TombstoneBlocks {
 	public static Block HEADSTONE;
 
 	public static void init() {
-		HEADSTONE = registerModBlocks(new HeadstoneBlock(QuiltBlockSettings.of(Material.STONE)), "headstone", ItemGroups.FUNCTIONAL);
+		HEADSTONE = registerModBlocks(new HeadstoneBlock(QuiltBlockSettings.of(Material.STONE)
+				.strength(2.0f, 6.0f)),"headstone", ItemGroups.FUNCTIONAL);
 	}
 
 	public static Block registerModBlocks(Block block, String name, ItemGroup group) {
