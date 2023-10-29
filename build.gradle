@@ -3,8 +3,11 @@ plugins {
 	alias libs.plugins.quilt.loom
 }
 
-archivesBaseName = project.archives_base_name
-version = "${project.version}+${libs.versions.minecraft.get()}"
+base {
+	archivesName = project.archives_base_name
+}
+
+version = "$project.version+${libs.versions.minecraft.get()}"
 group = project.maven_group
 
 repositories {
@@ -13,6 +16,20 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+}
+
+loom {
+	// Loom and Loader both use this block in order to gather more information about your mod.
+	mods {
+		// This should match your mod id.
+		"tombstones" {
+			// Tell Loom about each source set used by your mod here. This ensures that your mod's classes are properly transformed by Loader.
+			sourceSet("main")
+			// If you shade (directly include classes, not JiJ) a dependency into your mod, include it here using one of these methods:
+			// dependency("com.example.shadowedmod:1.2.3")
+			// configuration("exampleShadedConfigurationName")
+		}
+	}
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
@@ -39,7 +56,7 @@ processResources {
 	inputs.property 'version', version
 
 	filesMatching('quilt.mod.json') {
-		expand "version": version
+		expand 'version': version
 	}
 }
 
@@ -63,9 +80,10 @@ java {
 	// withJavadocJar()
 }
 
+// If you plan to use a different file for the license, don't forget to change the file name here!
 jar {
-	filesMatching('LICENSE') {
-		rename '^(LICENSE.*?)(\\..*)?$', "\$1_${archivesBaseName}\$2"
+	from('LICENSE') {
+		rename { "${it}_${base.archivesName.get()}" }
 	}
 }
 

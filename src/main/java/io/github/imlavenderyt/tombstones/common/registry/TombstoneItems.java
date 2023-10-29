@@ -5,7 +5,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.Nullable;
 
 import static io.github.imlavenderyt.tombstones.Tombstones.MOD_ID;
 
@@ -14,9 +16,9 @@ public class TombstoneItems {
 	public static void init() {
 	}
 
-	public static Item registerItem(Item item, String name, ItemGroup group) {
+	public static Item registerItem(Item item, String name, @Nullable RegistryKey<ItemGroup> itemGroupRegistryKey) {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
-		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.addItem(item));
+		ItemGroupEvents.modifyEntriesEvent(itemGroupRegistryKey).register(entries -> entries.addItem(item));
 		return item;
 	}
 }
