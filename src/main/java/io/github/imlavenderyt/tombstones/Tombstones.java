@@ -1,7 +1,7 @@
 package io.github.imlavenderyt.tombstones;
 
-import io.github.imlavenderyt.tombstones.common.registry.TombstoneBlocks;
-import io.github.imlavenderyt.tombstones.common.registry.TombstoneItems;
+import io.github.imlavenderyt.tombstones.common.init.TombstoneBlocks;
+import io.github.imlavenderyt.tombstones.common.init.TombstoneItems;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;

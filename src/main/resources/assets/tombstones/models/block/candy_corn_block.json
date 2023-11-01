@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "tombstones:block/candy_corn_block_top",
+    "bottom": "tombstones:block/candy_corn_block_bottom",
+    "side": "tombstones:block/candy_corn_block_side"
+  }
+}

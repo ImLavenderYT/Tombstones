@@ -1,3 +1,6 @@
 {
-  "block.tombstones.headstone": "Headstone"
+  "block.tombstones.headstone": "Headstone",
+  "block.tombstones.iron_fence": "Iron Fence",
+  "block.tombstones.candy_corn_block": "Block of Candy Corn",
+  "item.tombstones.candy_corn": "Candy Corn"
 }
