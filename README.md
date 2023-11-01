@@ -4,11 +4,12 @@
 
 ### About:
 
-Tombstones is a Minecraft mod for Quilt that adds decorative (for now) tombstones into the game.
-Currently in the game are the new "Headstones" that are great for a cemetery or spooky builds.
+Tombstones is a Minecraft mod for Quilt that adds Halloween themed items into the game.
 
 ## Currrently adds:
 - Headstones
+- Candy Corn
+- Iron Fence
 
 ### More things planned in the futrure.
 
